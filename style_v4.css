@@ -1,0 +1,159 @@
+@font-face {
+    font-family:"LiberationSans-Regular";
+    src: url("Fonts/LiberationSans-Regular.ttf") format(".ttf");
+}
+
+body {
+    font-family:"LiberationSans-Regular", sans-serif;
+    font-size: 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.grid-container {
+    display: grid;
+    padding: 15px 15px 15px 15px;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "name . . ."
+        "bio bio . ."
+        "image-1 image-1 image-2 image-2"
+        "text-1 text-1 text-2 text-2 "
+        "image-3 image-3 . ."
+        "text-3 text-3 . ." ;
+}
+
+.name {
+    grid-area: name;
+    position:relative;
+    top: 150px;
+    z-index: 1;
+}
+
+.name h1 {
+    color: rgb(0, 0, 0);
+    font-size: 20rem;
+    margin: 0px;
+}
+
+
+
+.bio {
+    grid-area: bio;
+    margin-top: -250px;
+    margin-left: 40px;
+}
+
+.bio p {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin: 247px;
+    margin-left: -20px;
+}
+
+.image-1 {
+    grid-area: image-1;
+    position: relative;
+}
+
+.image-1 img {
+    transition: opacity 0.3s ease;
+}
+
+.image-1 .b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.image-1:hover .a {
+    opacity: 0;
+}
+
+.image-1:hover .b {
+    opacity: 1;
+}
+
+.image-2 {
+    grid-area: image-2;
+}
+
+.image-3 {
+    grid-area: image-3;
+}
+
+.text-1 {
+    grid-area: text-1;
+}
+
+.text-2 {
+    grid-area: text-2;
+}
+
+.text-3 {
+    grid-area: text-3;
+}
+
+/* ===============================
+   Bilder und Texte zentrieren
+   =============================== */
+
+/* Bilder im Grid horizontal zentrieren */
+.image-1,
+.image-2,
+.image-3 {
+    justify-self: center; /* Bild horizontal zentrieren */
+}
+
+/* Texte direkt unter dem jeweiligen Bild zentrieren */
+.text-1,
+.text-2,
+.text-3 {
+    justify-self: center;  /* Grid-Item horizontal mittig */
+    text-align: center;    /* Text innerhalb des Elements zentrieren */
+    margin-top: 0px;      /* optionaler Abstand zum Bild */
+    max-width: fit-content; /* Textbreite passt sich Bildbreite an */
+}
+
+
+.image-1 {
+  display: block;
+  transition: filter 0.5s ease;
+}
+
+.image-1:hover {
+  filter:
+    drop-shadow(0 0 4px rgba(0, 120, 255, 0.6))
+    drop-shadow(0 0 10px rgba(0, 120, 255, 0.4))
+    drop-shadow(0 0 20px rgba(0, 120, 255, 0.2))
+    drop-shadow(0 0 30px rgba(0, 120, 255, 0.05));
+}
+
+.image-2 {
+  display: block;
+  transition: filter 0.5s ease;
+}
+.image-2:hover {
+  filter:
+    drop-shadow(0 0 4px rgba(0, 120, 255, 0.6))
+    drop-shadow(0 0 10px rgba(0, 120, 255, 0.4))
+    drop-shadow(0 0 20px rgba(0, 120, 255, 0.2))
+    drop-shadow(0 0 30px rgba(0, 120, 255, 0.05));
+}
+
+.image-3 {
+  display: block;
+  transition: filter 0.5s ease;
+}
+.image-3:hover {
+  filter:
+    drop-shadow(0 0 4px rgba(0, 120, 255, 0.6))
+    drop-shadow(0 0 10px rgba(0, 120, 255, 0.4))
+    drop-shadow(0 0 20px rgba(0, 120, 255, 0.2))
+    drop-shadow(0 0 30px rgba(0, 120, 255, 0.05));
+}

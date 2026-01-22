@@ -1,6 +1,6 @@
 @font-face {
-    font-family:"Avara-Bold";
-    src: url("Fonts/Avara-Bold.woff2") format("woff2");
+    font-family:"LiberationSans-Regular";
+    src: url("Fonts/LiberationSans-Regular.ttf") format("ttf");
 }
 
 body {
@@ -17,7 +17,7 @@ img {
     display: grid;
     padding: 15px 15px 15px 15px;
     gap: 15px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas:
         "name name name bio"
         "image-1 image-1 image-2 image-2"
@@ -75,4 +75,39 @@ img {
     grid-area: text-3;
 }
 
+.image-1 {
+  display: block;
+  transition: filter 0.5s ease;
+}
 
+.image-1:hover {
+  filter:
+    drop-shadow(0 0 4px rgba(0, 120, 255, 0.6))
+    drop-shadow(0 0 10px rgba(0, 120, 255, 0.4))
+    drop-shadow(0 0 20px rgba(0, 120, 255, 0.2))
+    drop-shadow(0 0 30px rgba(0, 120, 255, 0.05));
+}
+
+.image-2 {
+  display: block;
+  transition: filter 0.5s ease;
+}
+.image-2:hover {
+  filter:
+    drop-shadow(0 0 4px rgba(0, 120, 255, 0.6))
+    drop-shadow(0 0 10px rgba(0, 120, 255, 0.4))
+    drop-shadow(0 0 20px rgba(0, 120, 255, 0.2))
+    drop-shadow(0 0 30px rgba(0, 120, 255, 0.05));
+}
+
+.image-3 {
+  display: block;
+  transition: filter 0.5s ease;
+}
+.image-3:hover {
+  filter:
+    drop-shadow(0 0 4px rgba(0, 120, 255, 0.6))
+    drop-shadow(0 0 10px rgba(0, 120, 255, 0.4))
+    drop-shadow(0 0 20px rgba(0, 120, 255, 0.2))
+    drop-shadow(0 0 30px rgba(0, 120, 255, 0.05));
+}
