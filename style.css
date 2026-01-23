@@ -199,7 +199,6 @@ img {
 .image-1:hover ~ .hover-2 .from-1,
 .image-1:hover ~ .hover-3 .from-1 {
     opacity: 1;
-    backdrop-filter: blur(12px);
 
   transition: opacity 0.3s ease;
 }
@@ -221,7 +220,7 @@ img {
     grid-area: hover-3;
     width: 75%;
     height: auto;
-    margin-left: 70px;
+    margin-left: 72.5px;
     margin-top: 50px;
 }
 
@@ -258,3 +257,23 @@ img {
 }
 
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+
+  /* Rasterpapier-Hintergrund */
+  background-color: #fafafa;
+  background-image:
+    linear-gradient(#dcdcdc 1px, transparent 1px),
+    linear-gradient(90deg, #dcdcdc 1px, transparent 1px);
+  background-size: 25px 25px;
+}
+
+.content {
+  padding: 40px;
+}
