@@ -37,6 +37,10 @@ a{
     justify-self: center;
 }
 
+.name:hover ~ .bio {
+    opacity: 1;
+    visibility: visible;
+}
 
 
 .name h1 {
@@ -50,17 +54,17 @@ a{
 .bio {
     grid-area: bio;
     margin-top: -250px;
-    margin-left: -250px;
-    
-
+    margin-left: 0px;
+    opacity: 0;
+    visibility: hidden;
+    justify-self: center; 
+    text-align: center;
 }
 
 
 .bio p {
     margin: 247px;
     margin-left: 250px;
-    max-height: 60px; 
-    opacity: 0;
 }
 
 .image-1 {
@@ -210,7 +214,7 @@ a{
     top: 0;
     left: 0;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.3s ease;
 }
 
 .image-1:hover ~ .hover-1 .from-1,
@@ -218,7 +222,7 @@ a{
 .image-1:hover ~ .hover-3 .from-1 {
     opacity: 1;
 
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease;
 }
 
 .image-2:hover ~ .hover-1 .from-2,
@@ -282,6 +286,9 @@ html, body {
 }
 
 body {
+  font-family: Arial, sans-serif;
+
+  /* Rasterpapier-Hintergrund */
   background-color: #fafafa;
   background-image:
     linear-gradient(#dcdcdc 1px, transparent 1px),
@@ -308,7 +315,7 @@ body {
 
     display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; /* vertikal */
 
 
   transform: rotate(15deg);    
@@ -317,6 +324,3 @@ body {
 
   z-index: 1000;
 }
-
-
-
